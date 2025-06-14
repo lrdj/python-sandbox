@@ -84,7 +84,6 @@ exclude:
 
 def create_gemfile(output_dir):
     """Create a Gemfile for the Jekyll site"""
-gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
     gemfile_content = """source "https://rubygems.org"
 
 gem "github-pages", group: :jekyll_plugins
