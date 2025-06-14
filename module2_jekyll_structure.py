@@ -84,21 +84,10 @@ exclude:
 
 def create_gemfile(output_dir):
     """Create a Gemfile for the Jekyll site"""
+gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
     gemfile_content = """source "https://rubygems.org"
 
-gem "jekyll", "~> 4.2"
-gem "webrick", "~> 1.7"
-gem "jekyll-feed", "~> 0.12"
-
-# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
-platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", "~> 1.2"
-  gem "tzinfo-data"
-end
-
-# Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+gem "github-pages", group: :jekyll_plugins
 """
     
     with open(os.path.join(output_dir, "Gemfile"), 'w') as f:
@@ -321,7 +310,7 @@ This directory contains a Jekyll site with GOV.UK Frontend integration using {as
 
 2. Install dependencies:
    ```
-   bundle install --path vendor/bundle
+   bundle install
    ```
 
 3. Start the Jekyll server:
@@ -416,7 +405,7 @@ def main():
         print(f"\nJekyll structure with GOV.UK Frontend v{GOVUK_FRONTEND_VERSION} ({asset_mode} mode) has been created in {args.output_dir}")
         print("To start the Jekyll server, run:")
         print(f"  cd {args.output_dir}")
-        print(f"  bundle install --path vendor/bundle")
+        print(f"  bundle install")
         print(f"  bundle exec jekyll serve")
         print("\nYou can now run module3_sample_pages.py to create sample pages.")
         

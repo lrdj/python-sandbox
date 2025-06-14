@@ -377,7 +377,7 @@ def main():
         print(f"Asset mode detected: {asset_mode}")
         print("To start the Jekyll server, run:")
         print(f"  cd {args.site_dir}")
-        print(f"  bundle install --path vendor/bundle")
+        print(f"  bundle install")
         print(f"  bundle exec jekyll serve")
         print("\nYour GOV.UK Frontend Jekyll site is now ready to use!")
         
