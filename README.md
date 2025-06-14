@@ -1,4 +1,4 @@
-# GOV.UK Frontend Jekyll Integration
+# GOV.UK Frontend Jekyll integration
 
 ![Default home page geerated by script](demo.png)
 
